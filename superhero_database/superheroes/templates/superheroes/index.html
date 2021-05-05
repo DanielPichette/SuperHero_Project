@@ -11,7 +11,8 @@
 <h1>List of Superheroes</h1>
 <ul>
     {% for Hero in all_heroes %}
-    <li><h2> {{Hero.name}}</h2></li>
+    <li><h2> {{Hero.name}}</h2>
+        <a href="{% url 'superheroes:detail' Hero.id %}">See more info</a></li>
     {% endfor %}
 </ul>
 </body>
